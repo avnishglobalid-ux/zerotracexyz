@@ -1,5 +1,11 @@
 <?php
 
+if ($_SERVER['REQUEST_URI'] === '/') {
+    header('Content-Type: text/plain; charset=utf-8');
+    echo "API Created By: Yash Jaruhar Ji";
+    exit;
+}
+
 header('Content-Type: application/json; charset=utf-8');
 
 $file = __DIR__ . '/data.json';
